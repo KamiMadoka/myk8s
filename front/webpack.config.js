@@ -15,7 +15,9 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'HtmlWebpackPlugin'
+            title: 'myk8s_front',
+            favicon: './favicon.ico',
+            template: './index.html'
         })
     ],
     output: {
