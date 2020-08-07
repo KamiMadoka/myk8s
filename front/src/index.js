@@ -6,9 +6,8 @@ function component() {
 
     element.appendChild(btn);
 
-    clearTimeouts
     return element;
-
 }
+
 
 document.body.appendChild(component());

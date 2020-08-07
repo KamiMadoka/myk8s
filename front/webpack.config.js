@@ -7,7 +7,7 @@ const {
 
 module.exports = {
     entry: {
-        app: ['webpack-hot-middleware/client', './index.js']
+        app: ['webpack-hot-middleware/client', './src/index.js']
     },
     mode: 'development',
     devtool: 'inline-source-map',
@@ -17,7 +17,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'myk8s_front',
             favicon: './favicon.ico',
-            template: './index.html'
+            template: './src/index.html'
         })
     ],
     output: {
