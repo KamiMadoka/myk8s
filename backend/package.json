@@ -1,14 +1,14 @@
 {
-  "name": "myk8s_backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "npx json-server --port 2333 --watch ./src/db.json"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "json-server": "^0.16.1"
-  }
+    "name": "myk8s_backend",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "npx json-server --host 0.0.0.0 --port 8080 --watch ./src/db.json"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "json-server": "^0.16.1"
+    }
 }
