@@ -1,25 +1,21 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
-function App() {
-    return <div>my react</div>
+function Hello() {
+    return <div>hello</div>
 }
 
-ReactDom.render(
-    <App />,
-    document.getElementById('root')
-);
-
-function component() {
-    var element = document.createElement('div');
-    var btn = document.createElement('button');
-
-    btn.innerHTML = 'Click me';
-
-    element.appendChild(btn);
-
-    return element;
+function Test() {
+    return <div>test</div>
 }
 
-
-document.body.appendChild(component());
+ReactDom.render((
+    <Router>
+        <Switch>
+            <Route path="/hello" component={Hello}></Route>
+            <Route path="/test" component={Test}></Route>
+            <Redirect from="/" to="/hello"></Redirect>
+        </Switch>
+    </Router>
+), document.getElementById('root'));
