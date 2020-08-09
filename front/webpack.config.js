@@ -40,6 +40,11 @@ module.exports = {
             }
         ]
     },
+    resolve: {
+        alias: {
+            'my-react-ui': path.resolve(__dirname, 'src/my-react-ui')
+        }
+    },
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
