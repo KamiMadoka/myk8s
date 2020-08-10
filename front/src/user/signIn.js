@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Input } from 'my-react-ui';
+import { myaxios } from 'util';
 
 function SignIn() {
     const [username, setUsername] = useState();
@@ -8,6 +9,15 @@ function SignIn() {
 
     function handleClcik() {
         console.log(username, email, password)
+        if (username && email && password) {
+            myaxios.post('/user', {
+                username,
+                email,
+                password
+            }).then(res => console.log(res))
+        }
+        myaxios.delete('/user/1').then(res => console.log(res))
+        myaxios.get('/user').then(res => console.log(res))
     }
 
     return (

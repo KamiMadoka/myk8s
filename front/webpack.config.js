@@ -42,7 +42,8 @@ module.exports = {
     },
     resolve: {
         alias: {
-            'my-react-ui': path.resolve(__dirname, 'src/my-react-ui')
+            'my-react-ui': path.resolve(__dirname, 'src/my-react-ui'),
+            'util': path.resolve(__dirname, 'src/util')
         }
     },
     output: {
